@@ -1,5 +1,11 @@
+/* Giving the body a gradient background that fills the screen. */
 body {
-    background: #efefef;
+    background: linear-gradient(to bottom, #FF512F, #DD2476);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
 }
 
 .row {
@@ -20,7 +26,13 @@ flex-grow: 0;
 padding: 1rem;
 }
 
+/* Setting hover functionality to buttons in nav */
 .nav a:hover {
     background-color: black;
     color: #efefef;
+}
+
+/* Styling to position footer to the bottom of the screen. */
+footer {
+
 }
