@@ -1,8 +1,9 @@
 /* Giving the body a gradient background that fills the screen. */
 body {
+    font-family: 'Catamaran', sans-serif;
     background: linear-gradient(to bottom, #FF512F, #DD2476);
     height: 100%;
-    margin: 0;
+    margin: 1rem;
     background-repeat: no-repeat;
     background-attachment: fixed;
    
@@ -26,13 +27,38 @@ flex-grow: 0;
 padding: 1rem;
 }
 
-/* Setting hover functionality to buttons in nav */
+/* Set button Link formatting */
+.nav a{
+text-transform: uppercase;
+font-family: 'Catamaran', sans-serif;
+font-size: 10pt;
+font-weight: bold;
+letter-spacing: 0.075em;
+line-height: 1.5em;
+color: #FAF7EB;
+}
+
+/* Setting button functionality */
+.nav a:link {
+    text-decoration: none;
+    color: #FAF7EB;
+}
+.nav a:visited {
+    text-decoration: none;
+    color: #58523a;
+}
+
 .nav a:hover {
     background-color: black;
     color: #efefef;
 }
 
+.nav a:active {
+    text-decoration: none;
+    color: #FF512F;
+}
+
 /* Styling to position footer to the bottom of the screen. */
 footer {
-
-}
+    background-color: aqua;
+ }
