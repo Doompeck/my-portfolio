@@ -2,6 +2,7 @@
 --primary: #6a0848;
 --secondary: #d9dc65;
 }
+
 /* Giving the body a gradient background that fills the screen. */
 body {
     font-family: 'Catamaran', sans-serif;
@@ -12,9 +13,6 @@ body {
 }
 
 header {
-  /* background-color: var(--primary);
-  padding: 1rem;
-  flex-wrap: wrap; */
   padding: 15px 6% 15px 0;
   display: flex;
   flex-direction: row;
@@ -25,14 +23,14 @@ header {
   box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
 }
 
-/* .row {
-    display: flex;
+/* Sets the h1 in the header to default state */
+header h1 {
+ font-size: 2vw;
+ color: var(--secondary);
+ padding-left: 1rem;
 }
 
-.col {
-    flex: 1 0 5%;
-} */
-
+/* This formats the navigation buttons as a row with padding and lignment */
 nav {
     display: flex;
     flex-direction: row;
@@ -40,11 +38,6 @@ nav {
     align-items: center;
     padding-right: 2rem;
 }
-
-/* .nav col {
-flex-grow: 0;
-padding: 1rem;
-} */
 
 /* Set button Link formatting */
 .nav a{
@@ -58,35 +51,9 @@ color: var(--secondary);
 
 /* Sets all within the Main for max width and left & right margins based on screen width*/
 #main-properties {
-  max-width: 88%;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-}
-/* My Container CSS */
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-/* box for flex items */
-.flex-item {
-    min-height: 100px;
-    max-height: 100px;
-    flex-basis: calc(50% - 1em);
-    display: flex;
-    align-items: flex-end;
-    padding: 0 0 20px 0;
-    margin: 0.5em;
-    text-decoration: none;
-    background-size: 150%;
-    font-size: 0.9rem;
-  }
-
-/* Make first item in portfolio priority*/
-.flex-item:first-child {
-    min-height: 250px;
-    flex-basis: 100%;
 }
 
 /* Setting button functionality for the nav*/
@@ -110,12 +77,42 @@ color: var(--secondary);
 
 
 /* Setting the Hero image */
-#hero {
+.hero {
   background-image: url(../images/rusted-metal.jpg);
   background-size:cover;
   background-position: center;
   min-height: 45vh;
   display: flex;
+}
+
+/* The wrapper of the Work section */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Items within the Work section */
+.flex-item {
+  min-height: 100px;
+  max-height: 100px;
+  flex-basis: calc(50% - 1em);
+  display: flex;
+  padding: 0 0 20px 0;
+  margin: 0.5em;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* Make first item in portfolio priority*/
+.flex-item:first-child {
+  min-height: 250px;
+  flex-basis: 100%;
+}
+.flex-item div {
+  font-size: 1rem;
+  color: var(--secondary);
+  padding: 10px 10px;
 }
 
 
@@ -141,7 +138,7 @@ color: var(--secondary);
 }
 
 .info-container > div {
-  flex: 0 0 50%;
+  flex: 0 0 77%;
 }
 
 .info-container p {
@@ -153,7 +150,14 @@ color: var(--secondary);
   background-image: url(/assets/images/rusted-metal.jpg);
 }
 
-
+.contact address a {
+  color: var(--primary);
+  padding: 5px;
+  text-decoration: none;
+  font-style: normal;
+  margin: 0 0.2rem 0.1rem;
+  display: inline-block;
+}
 
 
 
