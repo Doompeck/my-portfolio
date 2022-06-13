@@ -26,6 +26,8 @@ body {
 }
 
 .nav {
+    display: flex;
+    flex-direction: row;
     justify-content: right;
     align-items: center;
 }
@@ -39,14 +41,36 @@ padding: 1rem;
 .nav a{
 text-transform: uppercase;
 font-family: 'Catamaran', sans-serif;
-font-size: 6pt;
+font-size: 12pt;
 font-weight: bold;
 letter-spacing: 0.075em;
 line-height: 1.5em;
 color: var(--secondary);
 }
 
-/* Setting button functionality */
+/* Sets all within the Main for max width and left & right margins based on screen width*/
+#main-properties {
+  max-width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* My Container CSS */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+/* box for flex items */
+
+
+/* Make first item in portfolio priority*/
+.flex-item:first-child {
+    min-height: 400px;
+    flex-basis: 100%;
+}
+
+/* Setting button functionality for the nav*/
 .nav a:link {
     text-decoration: none;
     color: var(--secondary);
@@ -57,7 +81,6 @@ color: var(--secondary);
 }
 
 .nav a:hover {
-    background-color: black;
     color: #efefef;
 }
 
@@ -66,7 +89,71 @@ color: var(--secondary);
     color: #FF512F;
 }
 
+
+/* Setting the Hero image */
+#hero {
+  background-image: url(../images/rusted-metal.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 20vh;
+  padding: 2% 6%;
+  display: flex;
+}
 /* Styling to position footer to the bottom of the screen. */
-footer {
-    background-color: aqua;
- }
+
+
+/* Set max width based on 980px */
+@media screen and (max-width: 980px) {
+    header {
+      padding: 0 0 10px 0;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    header h1 {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 5vw;
+    }
+  
+    header nav {
+      justify-content: center;
+    }
+  
+    .page-section > h2,
+    .page-section > div {
+      flex: 0 0 100%;
+    }
+  
+    .page-section > h2 {
+      border-right: none;
+      border-bottom: 4px solid var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: left;
+      font-size: 7vw;
+    }
+}
+
+/* Flex elements to account for reduced page size. */
+@media screen and (max-width: 768px) {
+    .flex-item,
+    .flex-item:first-child {
+      flex-basis: 100%;
+    }
+  
+    .flex-item:first-child {
+      min-height: 150px;
+    }
+  
+    .hero {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .contact address {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
